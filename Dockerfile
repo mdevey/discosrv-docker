@@ -14,4 +14,4 @@ VOLUME /var/discosrv
 
 EXPOSE 22026/udp
 
-CMD ["/usr/local/discosrv-linux-amd64/discosrv", "-limit-avg", "10", "-limit-cache", "25000"]
+CMD ["/usr/local/discosrv-linux-amd64/discosrv", "-limit-avg", "10", "-limit-cache", "25000", "-stats-intv", "300"]

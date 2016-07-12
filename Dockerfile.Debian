@@ -1,0 +1,21 @@
+FROM debian:jessie
+
+EXPOSE 8443
+VOLUME /root/
+ENV tarball https://build.syncthing.net/job/stdiscosrv/1746/artifact/stdiscosrv-linux-amd64-v0.14.0-beta.1.tar.gz
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+ ca-certificates curl \
+ && mkdir /std \
+ && curl -sSL $tarball | tar -v -C /std -xz \
+ && apt-get --purge -y --assume-yes autoremove curl \
+ && apt-get --purge -y --assume-yes autoremove ca-certificates \
+ && apt-get clean \
+ && rm -rf /var/lib/apt/lists/*
+
+CMD ["/std/stdiscosrv-linux-amd64-v0.14.0-beta.1/stdiscosrv" ,\
+    "-key" , "/cert/key.pem" ,\
+    "-cert" , "/cert/cert.pem" ,\
+    "-limit-avg" , "10" ,\
+    "-limit-cache" , "25000" ,\
+    "-stats-file" , "/root/stats"]

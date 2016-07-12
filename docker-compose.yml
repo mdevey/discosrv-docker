@@ -1,0 +1,13 @@
+stdiscosrv:
+  build: ./
+
+  #note this unique name and :8443 will need to be removed for multiple disco queens
+  container_name: disco
+  ports:
+    - 8443:8443
+
+  volumes:
+
+    # ~/disco_cert should contain cert.pem & key.pem
+    # Easy: syncthing -generate="~/disco_cert"
+    - ~/disco_cert/:/cert

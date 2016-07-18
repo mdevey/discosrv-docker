@@ -6,7 +6,7 @@ Docker image of Syncthing Discovery Server running in Alpine linux. Total downlo
 Used instead of announce.syncthing.net
 (Action > Settings > Global Discovery Servers > default)
 
-Note: v0.14.0-beta.1 is not compatible with previous versions.
+Note: v0.14.0-rc.1 is not compatible with previous versions.
 
 ## Via docker only
 ```
@@ -15,7 +15,7 @@ docker run -p 8443:8443 -v ~/disco_cert:/cert --restart=always mdevey/stdiscosrv
 ```
 Example output
 ```
-stdiscosrv v0.14.0-beta.1 (go1.6.2 linux-amd64) unknown-user@lx-buildslave.syncthing.net 2016-07-10 07:23:58
+stdiscosrv v0.14.0-rc.1 (go1.6.2 linux-amd64) unknown-user@lx-buildslave.syncthing.net 2016-07-10 07:23:58
 Server device ID is ROSKTQK-G5HL7C3-QWJ3E7Z-NMDU7SD-QL777WE-VTZ7FIK-JA7VON6-ZJ6B22F
 ```
 
@@ -47,7 +47,7 @@ Example output
 ```
 Starting disco
 Attaching to disco
-disco  | stdiscosrv v0.14.0-beta.1 (go1.6.2 linux-amd64) unknown-user@lx-buildslave.syncthing.net 2016-07-10
+disco  | stdiscosrv v0.14.0-rc.1 (go1.6.2 linux-amd64) unknown-user@lx-buildslave.syncthing.net 2016-07-10
 disco  | Server device ID is ROSKTQK-G5HL7C3-QWJ3E7Z-NMDU7SD-QL777WE-VTZ7FIK-JA7VON6-ZJ6B22F
 ```
 

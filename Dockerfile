@@ -5,8 +5,8 @@ RUN adduser -D user
 VOLUME /home/user
 
 # To update browse https://build.syncthing.net/job/stdiscosrv/
-ENV version v0.14.0-rc.1
-ENV jenkins_build 1751
+ENV version v0.14.3+2-ga8cd9d0
+ENV jenkins_build 1771
 
 RUN set -x \
  && apk --no-cache --virtual .temp_del add ca-certificates \

@@ -1,4 +1,4 @@
-FROM alpine:3.4
+FROM alpine:3.3
 
 EXPOSE 8443
 RUN adduser -D user
